@@ -8,4 +8,9 @@ edition = "2021"
 [dependencies]
 axum = "0.4.2"
 tokio = { version = "1.14.0", features = ["full"] }
-serde = "1.0.132"
+tracing = "0.1"
+tracing-subscriber = { version="0.3", features = ["env-filter"] }
+tower = { version = "0.4", features = ["util", "timeout"] }
+tower-http = { version = "0.2.0", features = ["full"] }
+uuid = { version = "0.8", features = ["serde", "v4"] }
+serde = { version = "1.0.132", features = ["derive"] }
